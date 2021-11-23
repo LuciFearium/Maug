@@ -6,7 +6,7 @@ while input("Please input password : ") != my_secret:
 print("Password is correct")
 
 def echo():
-  echoWord =  input("What would you like me to repeat?\n")
+  echoWord =  input("\nWhat would you like me to repeat?\n")
   time.sleep(.5)
   print("You said: " + echoWord)
 
@@ -23,6 +23,7 @@ print("With MaugBot, we have a few options! The first option is an Echo Bot! I w
 
 def menu():
   selection = input("\nWhat option would you like to select? Echo bot, Coming Soon\n")
+  time.sleep(.2)
   return selection
 
 
@@ -43,7 +44,8 @@ while loop == 0:
   if selection.lower() in echoOptions:
     while done == 0:
       echo()
-      again = input("Would you like to try again?\n")
+      time.sleep(1)
+      again = input("\nWould you like to try again?\n")
       time.sleep(.5)
       if again.lower() == "no":
         done = 1
