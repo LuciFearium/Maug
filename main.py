@@ -1,7 +1,7 @@
 import os
 import time
-my_secret = os.environ['password']
-while input("Please input password : ") != my_secret:
+password = os.environ['password']
+while input("Please input password : ") != password:
     print("Password invalid")
 print("Password is correct")
 
