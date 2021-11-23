@@ -5,10 +5,18 @@ while input("Please input password : ") != my_secret:
     print("Password invalid")
 print("Password is correct")
 
+def cls():
+  print("\033c\033[J")
+
+
+def wait(dur):
+  time.sleep(dur)
+
 def echo():
-  echoWord =  input("\nWhat would you like me to repeat?\n")
-  time.sleep(.5)
+  echoWord =  input("What would you like me to repeat?\n")
+  wait(.5)
   print("You said: " + echoWord)
+
 
 global done
 done = 0
@@ -16,14 +24,15 @@ global loop
 loop = 0
 echoOptions = {"echo bot", "echo"}
 comingOptions = {"coming soon"}
+clear = {"clear","cls"}
 
-print("Hello! Welcome to MaugBot! I am a virtual chatbot for your enjoyment!")
+print("\nHello! Welcome to MaugBot! I am a virtual chatbot for your enjoyment!")
 
-print("With MaugBot, we have a few options! The first option is an Echo Bot! I will simply Echo what you say.")
+print("With MaugBot, we have a few options! The first option is an Echo Bot! I will simply Echo what you say.\n")
 
 def menu():
-  selection = input("\nWhat option would you like to select? Echo bot, Coming Soon\n")
-  time.sleep(.2)
+  selection = input("What option would you like to select? Echo bot, Coming Soon\n")
+  wait(.2)
   return selection
 
 
@@ -39,29 +48,32 @@ while loop == 0:
 
   selection = menu()
 
-  time.sleep(.2)
+  wait(.2)
   
   if selection.lower() in echoOptions:
     while done == 0:
       echo()
-      time.sleep(1)
+      wait(1)
       again = input("\nWould you like to try again?\n")
-      time.sleep(.5)
+      wait(.5)
       if again.lower() == "no":
         done = 1
       elif again.lower() == "yes":
         done = 0
       else:
         print("I'm sorry, I misunderstood you! I'm going to assume you would like to try again!")
-    time.sleep(2)
+    wait(.5)
   
   elif selection.lower() in comingOptions:
     print("We have many cool features prepared and being worked on! Please feel free to return and check them out later.")
-    time.sleep(2)
+    wait(2)
+
+  elif selection.lower() in clear:
+    cls()
   
   else:
     print("I'm sorry, I didn't understand your request. Spaces and spelling are vital, but capitalization is not!\n Please try again!")
-    time.sleep(2)
+    wait(2)
 
   #print("Output of variable 'selection' is:" + selection)
 
