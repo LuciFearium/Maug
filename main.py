@@ -18,7 +18,7 @@ print("Hello! Welcome to MaugBot! I am a virtual chatbot for your enjoyment!")
 print("With MaugBot, we have a few options! The first option is an Echo Bot! I will simply Echo what you say.")
 
 def menu():
-  selection = input("What option would you like to select? Echo bot, Coming Soon\n")
+  selection = input("\nWhat option would you like to select? Echo bot, Coming Soon\n")
   return selection
 
 
@@ -30,7 +30,9 @@ def menu():
 #  }
 
 while loop == 0:
+
   selection = menu()
+
   if selection.lower() == "echo bot":
     while done == 0:
       echo()
@@ -41,10 +43,13 @@ while loop == 0:
         done = 0
       else:
         print("I'm sorry, I misunderstood you! I'm going to assume you would like to try again!")
+  
   elif selection.lower() == "coming soon":
     print("We have many cool features prepared and being worked on! Please feel free to return and check them out later.")
+  
   else:
     print("I'm sorry, I didn't understand your request. Please try select a new option!")
+
   #print("Output of variable 'selection' is:" + selection)
 
 
