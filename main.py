@@ -27,8 +27,8 @@ def echo():
   print("You said: " + echoWord)
 
 # Setting option aliases for menu options. #
-echoOptions = {"echo bot", "echo"}
-comingOptions = {"coming soon"}
+echoOptions = {"echo bot", "echo", "1"}
+comingOptions = {"coming soon", "2"}
 clear = {"clear","cls"}
 
 
@@ -39,7 +39,7 @@ print("With MaugBot, we have a few options! The first option is an Echo Bot! I w
 
 # Function to be called for the menu 'screen' where users can select options. #
 def menu():
-  selection = input("What option would you like to select? Echo bot, Coming Soon\n")
+  selection = input("What option would you like to select? \n1) Echo bot. \n2) Coming Soon\n")
   wait(.2)
   return selection
 
