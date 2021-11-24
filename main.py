@@ -9,7 +9,7 @@ print("Password is correct")
 
 # Function to clear the console. #
 def cls():
-  print("\033c\033[J")
+  print("\033c\033[3J", end='')
 
 # Function to be called when wanting to add a pause. #
 def wait(dur):
@@ -24,8 +24,6 @@ def echo():
 # Setting some global variables, as well as option aliases. #
 global done
 done = 0
-global loop
-loop = 0
 echoOptions = {"echo bot", "echo"}
 comingOptions = {"coming soon"}
 clear = {"clear","cls"}
@@ -43,7 +41,7 @@ def menu():
   return selection
 
 # Looping the chat feature so that Bot can be used repeatedly with less code. #
-while loop == 0:
+while True == True:
 
   # Setting variable for whether user is finished with selected option. #
   done = 0
@@ -83,6 +81,7 @@ while loop == 0:
     print("I'm sorry, I didn't understand your request. Spaces and spelling are vital, but capitalization is not!\n Please try again!")
     wait(2)
 
+  cls()
   # Print function to be enabled for debugging purposes. #
   #print("Output of variable 'selection' is:" + selection)
 
