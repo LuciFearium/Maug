@@ -13,7 +13,7 @@ while input("Please input password : ") != password:
 print("Password is correct")
 
 # Function to clear the console. #
-def cls():
+def clr():
   print("\033c\033[3J", end='')
 
 # Function to be called when wanting to add a pause. #
@@ -29,7 +29,7 @@ def echo():
 # Setting option aliases for menu options. #
 echoOptions = {"echo bot", "echo", "1"}
 comingOptions = {"coming soon", "2"}
-clear = {"clear","cls"}
+clear = {"clear","clr",}
 
 
 # Welcome 'screen' when bot is turned on and unlocked. #
@@ -76,16 +76,14 @@ while True == True:
 
   # User selects hidden clear console option. # 
   elif selection.lower() in clear:
-    cls()
+    clr()
   
   # User did not input a valid option selection. #
   else:
     print("I'm sorry, I didn't understand your request. Spaces and spelling are vital, but capitalization is not!\n Please try again!")
     wait(2)
 
-  cls()
-  # Print function to be enabled for debugging purposes. #
-  #print("Output of variable 'selection' is:" + selection)
+  clr()
 
 # User should never receive this text, but it is here in case somehow user escapes loop so that the debugger knows they escaped the loop.
 print("You aren't supposed to be on this side of the code.. How did you know this was here?! Go get someone important, quick!")
