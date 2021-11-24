@@ -26,7 +26,7 @@ def echo():
   wait(.5)
   print("You said: " + echoWord)
 
-# Setting some global variables, as well as option aliases. #
+# Setting option aliases for menu options. #
 echoOptions = {"echo bot", "echo"}
 comingOptions = {"coming soon"}
 clear = {"clear","cls"}
