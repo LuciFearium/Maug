@@ -1,3 +1,8 @@
+#             THIS CODE IS WRITTEN BY LUCIFEARIUM                          #
+#   ITS INTENDED USE IS FOR A SMALL SIDE PROJECT UNDER MY OWN AUTHORITY    #
+#        PLEASE DO NOT ABUSE THE INFORMATION BELOW                         #
+
+
 import os
 import time
 
@@ -22,8 +27,6 @@ def echo():
   print("You said: " + echoWord)
 
 # Setting some global variables, as well as option aliases. #
-global done
-done = 0
 echoOptions = {"echo bot", "echo"}
 comingOptions = {"coming soon"}
 clear = {"clear","cls"}
@@ -53,7 +56,6 @@ while True == True:
   
   # User selects Echo Bot option. #
   if selection.lower() in echoOptions:
-    done = 0
     while done == 0:
       echo()
       wait(1)
