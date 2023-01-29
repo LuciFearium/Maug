@@ -6,11 +6,6 @@
 import os
 import time
 
-# Password, intended for use during development in order to lock Maug form being used without intention. #
-password = os.environ['password']
-while input("Please input password : ") != password:
-    print("Password invalid")
-print("Password is correct")
 
 # Function to clear the console. #
 def clr():
@@ -31,15 +26,22 @@ echoOptions = {"echo bot", "echo", "1"}
 comingOptions = {"coming soon", "2"}
 clear = {"clear","clr",}
 
+# Password, intended for use during development in order to lock Maug form being used without intention. #
+password = os.environ['password']
+while input("Please input password : ") != password:
+    print("Password invalid")
+print("Password is correct")
+clr()
+
 
 # Welcome 'screen' when bot is turned on and unlocked. #
-print("\nHello! Welcome to MaugBot! I am a virtual chatbot for your enjoyment!")
+print("Hello! Welcome to MaugBot! I am a virtual chatbot for your enjoyment!")
 
 print("With MaugBot, we have a few options! The first option is an Echo Bot! I will simply Echo what you say.\n")
 
 # Function to be called for the menu 'screen' where users can select options. #
 def menu():
-  selection = input("What option would you like to select? \n1) Echo bot. \n2) Coming Soon\n")
+  selection = input("What option would you like to select? \n1) Echo bot \n2) Coming Soon\n")
   wait(.2)
   return selection
 
